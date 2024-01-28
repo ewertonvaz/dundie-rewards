@@ -5,5 +5,10 @@ setup(
     version="0.1.0",
     description="Dunder-Miffin reward program",
     author="Ewerton da Costa Vaz",
-    packages=find_packages()
+    packages=find_packages(),
+    entry_points={
+        "console_scripts" : [
+            "dundie = dundie.__main__:main"
+        ]
+    }
 )
