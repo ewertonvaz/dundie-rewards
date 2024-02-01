@@ -8,11 +8,10 @@ def load(file_path):
     
     >>> len(load("assets/people.csv))
     2
-
     """
     try:
       with open(file_path) as file_:
-        return file_.readlines()
+        return [line.strip() for line in file_.readlines()]
     except FileNotFoundError as e:
        log.error(str(e))
        raise(e)

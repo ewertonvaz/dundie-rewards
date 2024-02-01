@@ -20,4 +20,4 @@ def main():
         help="Path to file which will be loaded"
     )
     args = parser.parse_args()
-    print(*globals()[args.subcommand](args.file_path))
+    print(*globals()[args.subcommand](args.file_path), end="")
