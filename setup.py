@@ -22,6 +22,7 @@ setup(
     long_description_content_type="text/markdown",
     author="Ewerton da Costa Vaz",
     packages=find_packages(),
+    python_requires="">=3.8.0",
     entry_points={
         "console_scripts" : [
             "dundie = dundie.__main__:main"
