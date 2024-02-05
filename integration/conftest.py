@@ -1,9 +1,10 @@
-MARKER="""
+MARKER = """
 integration: Mark integration tests
 high: High Priority
 medium: Medium Priority
 low: Low Priority
 """
+
 
 def pytest_configure(config):
     for line in MARKER.split("\n"):
