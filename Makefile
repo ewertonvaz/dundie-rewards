@@ -2,7 +2,7 @@
 
 install:
 	@echo "Installing for dev env"
-	@.venv/Scripts/python -m pip install -e.['dev']
+	@.venv/Scripts/python -m pip install -e.['test,dev']
 venv:
 	@source .venv/Scripts/activate
 
@@ -13,10 +13,10 @@ ipython:
 	@.venv/Scripts/ipython
 
 test:
-	@.venv/Scripts/pytest -vv -s tests/
+	@.venv/Scripts/pytest -vv -s tests/ --forked
 
 watch:
-	@.venv/Scripts/ptw -- -vv -s tests/
+	@.venv/Scripts/ptw -- -vv -s tests/ --forked
 
 lint:
 	@.venv/Scripts/pflake8
