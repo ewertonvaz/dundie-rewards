@@ -7,7 +7,10 @@ on:
   pull_request:
     branches:
       - "main"
+
   workflow_dispatch:
+
+
 jobs:
   lint:
     strategy:
@@ -29,6 +32,7 @@ jobs:
         run: isort --profile=black --check --diff dundie tests integration
       - name: Look for auto format errors
         run: black --check --diff dundie tests integration
+
   tests:
     needs: lint
     strategy:
@@ -38,8 +42,8 @@ jobs:
         os: [ubuntu-latest]
     runs-on: ${{matrix.os}}
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{matrix.python-version}}
       - name: Install Project

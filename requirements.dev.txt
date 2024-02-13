@@ -1,15 +1,14 @@
-#Dev dependencies
+# dev dependencies
 ipython>=7.0.0,<=8.0.0
 ipdb
 pudb
 pytest-watch
 
-#Code quality
+# Code Quality
 flake8
 pyproject-flake8
 black
 isort
-click
 
-#Install project as editable
+# Install project as editable
 -e .
